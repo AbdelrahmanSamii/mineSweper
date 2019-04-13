@@ -1,0 +1,96 @@
+			start the game 
+get choise 
+if choise = 1
+	playgame
+		get height , wedth 
+		create array of height,wedth
+		print starting border Grid
+		calculate number of Mines
+		get starting posotion
+		random fill the Mines 
+		count Mines around every element 
+		print the numbers of Mines around
+		print 9 in Mine place
+		make copy of the Grid named Playing Grid
+		print all elements as 'X'
+
+	while (!= win && != lose)
+		get position >0 , <grid border
+		get action (F,O,P,N,U,S)
+			if action = F
+			PlayingGrid[position] = -3
+		
+			if action = O
+				if Grid[position] = 0
+				PlayingGrid = -1
+				if Grid[position] >0 , < 9
+				PlayingGrid = -2
+				if Grid[position] = 9
+				PlayingGrid = -5
+
+			if action = P
+				if Grid[position] = flags around
+				Open parameter 
+
+			if action = N
+				PlayingGrid = -4
+
+			if action = U
+				if PlayingGrid[position] = -3
+					PlayingGrid[position] = Grid[position]
+
+			if action = S
+				save the game
+
+		print PlayingGrid
+			if PlayingGrid[x,y] = -1
+				print 0
+
+			if playingGrid[x,y] = -2
+				print Grid[x,y]
+
+			if PlayingGrid[x,y] = -3
+				print "F"
+
+			if PlayingGrid[x,y] = -4
+				print "?"
+
+			if PlayingGrid[x,y] = -5
+				print "!"
+
+		for (i = 0 to i = wedth)
+			(for j = 0 to j = height)
+				if Grid[i,j] = 0 && PlayingGrid[i,j] != -1
+					win = False
+				if Grid[i,j] >0 && <9 && PlayingGrid[i,j] != -2
+					win = False
+				if PlayingGrid[i,j] = -5
+					lose = True
+		if win  = True
+			calculate score 
+			take user name 
+			save score
+			drawwin
+	
+		if lose = True
+			drawlose
+
+	if choise = 2 
+		load game
+
+	if choise = 3 
+		show leader boards
+----------------------------------------------------------------------------------
+				DFS Function (x,y)
+If Grid[x,y] = 0 
+	 PlayingGrid[x,y] = -1
+	
+	for (i = x-1 to i = x +1 )
+		for (j = y-1 to j = y + 1)
+			if (Grid[i,j] > 0 && < 9)
+				PlatingGrid[i,j] = -2
+					
+			else if (Grid[i,j] = 0)
+				PlayingGrid[i,j] = -1
+				DFS(i,j)
+		

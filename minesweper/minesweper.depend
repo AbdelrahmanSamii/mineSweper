@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1482946464 source:c:\users\7amo samy\desktop\minesweper\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<ctype.h>
+	<unistd.h>
+	<string.h>
+	<pthread.h>
+	<windows.h>
+	<conio.h>
+	<math.h>
+	"draw.h"
+	"GetInfo.h"
+	"initialization.h"
+
+1482946387 c:\users\7amo samy\desktop\minesweper\draw.h
+
+1482714315 c:\users\7amo samy\desktop\minesweper\getinfo.h
+
+1482792297 c:\users\7amo samy\desktop\minesweper\initialization.h
+
